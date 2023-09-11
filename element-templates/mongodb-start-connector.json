@@ -1,0 +1,140 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "MongoDB Start Connector",
+  "id": "io.camunda.connectors.MongoDBInbound.start",
+  "description": "Listen to a MongoDB change stream for triggering events",
+  "category": {
+    "id": "connectors",
+    "name": "Connectors"
+  },
+  "appliesTo": [
+    "bpmn:StartEvent"
+  ],
+  "elementType": {
+    "value": "bpmn:StartEvent"
+  },
+  "groups": [
+    {
+      "id": "config",
+      "label": "Connector Configuration"
+    },
+    {
+      "id": "output",
+      "label": "Output"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda:mongodbinbound:1",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "inbound.type"
+      }
+    },
+    {
+      "id": "mongoDBUrl",
+      "label": "MongoDB URL",
+      "group": "config",
+      "feel": "optional",
+      "description": "URL of MongoDB database",
+      "value": "",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "mongoDBUrl"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "id": "mongoDBDatabase",
+      "label": "MongoDB Database",
+      "group": "config",
+      "feel": "optional",
+      "description": "Name of database to monitor",
+      "value": "",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "mongoDBDatabase"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "id": "mongoDBCollection",
+      "label": "MongoDB Collection",
+      "group": "config",
+      "feel": "optional",
+      "description": "Name of collection to monitor. Leave empty to monitor database",
+      "value": "",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:property",
+        "name": "mongoDBCollection"
+      }
+    },
+    {
+      "id": "mongoDBEvent",
+      "label": "MongoDB Event",
+      "group": "config",
+      "description": "Event to monitor",
+      "value": "",
+      "type": "Dropdown",
+      "choices": [
+        {
+          "name": "Insert",
+          "value": "insert"
+        },
+        {
+          "name": "Replace",
+          "value": "replace"
+        },
+        {
+          "name": "Delete",
+          "value": "delete"
+        },
+        {
+          "name": "Any",
+          "value": "any"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:property",
+        "name": "mongoDBEvent"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Event variable",
+      "type": "String",
+      "group": "output",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:property",
+        "name": "resultVariable"
+      },
+      "description": "Name of variable to store the contents of the inbound event"
+    },
+    {
+      "label": "Variable expression",
+      "type": "String",
+      "group": "output",
+      "feel": "required",
+      "optional": true,
+      "binding": {
+        "type": "zeebe:property",
+        "name": "resultExpression"
+      },
+      "description": "Expression to map elements of the inbound event to process variables"
+    }
+  ],
+  "icon": {
+    "contents": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjguNDA0NjY4OCIKICAgaGVpZ2h0PSIxOCIKICAgdmlld0JveD0iMCAwIDguNDA0NjY4OCAxOCIKICAgZmlsbD0ibm9uZSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMSIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzMSIgLz4KICA8cGF0aAogICAgIGQ9Ik0gNS43NzMwOTcyLDIuMDMwNTgwOCBDIDUuMDE2Njg2OSwxLjEzNjA3NSA0LjM2NTMyNzQsMC4yMjc1OTY5NSA0LjIzMjI2MDIsMC4wMzg5MTI3IGMgLTAuMDE0MDExLC0wLjAxMzk3NjIxIC0wLjAzNTAyOSwtMC4wMTM5NzYyMSAtMC4wNDkwMzMsMCBDIDQuMDUwMTUzLDAuMjI3NTk2OTUgMy4zOTg4MDA3LDEuMTM2MDc1IDIuNjQyMzgzMiwyLjAzMDU4MDggLTMuODUwMTUwOSwxMC4yODM3NTMgMy42NjQ5NDksMTUuODUzNDk4IDMuNjY0OTQ5LDE1Ljg1MzQ5OCBsIDAuMDYzMDMxLDAuMDQxODcgYyAwLjA1NjAyNSwwLjg1OTYyNCAwLjE5NjEwNDksMi4wOTY1MzUgMC4xOTYxMDQ5LDIuMDk2NTM1IGggMC4yODAxNTI2IDAuMjgwMTUzMiBjIDAsMCAwLjE0MDA3OTYsLTEuMjI5OTY5IDAuMTk2MTExNSwtMi4wOTY1MzUgbCAwLjA2MzAzMSwtMC4wNDg4NyBjIDAuMDA2OTksMCA3LjUyMjEyNTgsLTUuNTYyNzMzIDEuMDI5NTY0MiwtMTMuODE1OTA1MiB6IG0gLTEuNTY4ODYsMTMuNjk3MTA4MiBjIDAsMCAtMC4zMzYxNzc1LC0wLjI4NjU0MSAtMC40MjcyMzEyLC0wLjQzMzMxOCB2IC0wLjAxMzk2IEwgNC4xODMyMjcxLDYuMjkzNDU2MiBjIDAsLTAuMDI3OTUzIDAuMDQyMDI4LC0wLjAyNzk1MyAwLjA0MjAyOCwwIGwgMC40MDYyMTQxLDguOTg2OTU4OCB2IDAuMDEzOTYgYyAtMC4wOTEwNDcsMC4xNDY3NzggLTAuNDI3MjMxNywwLjQzMzMxOSAtMC40MjcyMzE3LDAuNDMzMzE5IHoiCiAgICAgZmlsbD0iIzAwZWQ2NCIKICAgICBpZD0icGF0aDEiCiAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjA3MDEyNzgiIC8+Cjwvc3ZnPgo="
+  }
+}
