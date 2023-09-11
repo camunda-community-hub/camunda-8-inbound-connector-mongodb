@@ -6,7 +6,7 @@
 
 !!! Work in progress !!!
 
-A starting point to build a Start and Intermediate Inbound Postgres Connector. Use the Change Stream feature in MongoDB to start process instances or throw intermediate events. Feedback and PRs are welcome! In the Connector you'll need to provide the Mongo DB URL (using a Replica Set or Sharded Cluster topology), database name , optional collection name, and type of event (or all) to monitor.
+A starting point to build a Start and Intermediate Inbound MongoDB Connector. Use the Change Stream feature in MongoDB to start process instances or throw intermediate events. Feedback and PRs are welcome! In the Connector you'll need to provide the Mongo DB URL (using a Replica Set or Sharded Cluster topology), database name , optional collection name, and type of event (or all) to monitor.
 
 If you are unfamiliar with how to set up a MongoDB Replica Set, follow these [instructions](./MongoDBSampleSetup.md) to set one up locally. 
 
