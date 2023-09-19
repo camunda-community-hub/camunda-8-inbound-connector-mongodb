@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="1096.5333"
+   viewBox="0 0 512 1096.5333"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="MongoDB_Logo.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.6108949"
+     inkscape:cx="418.71135"
+     inkscape:cy="229.06522"
+     inkscape:window-width="1392"
+     inkscape:window-height="971"
+     inkscape:window-x="0"
+     inkscape:window-y="752"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     d="M 350.62379,121.59852 C 304.68399,67.271647 265.12436,12.096178 257.04267,0.63664173 c -0.85098,-0.84885567 -2.12744,-0.84885567 -2.97799,0 C 245.98256,12.096178 206.42336,67.271647 160.48312,121.59852 -233.83417,622.84634 222.5876,961.11905 222.5876,961.11905 l 3.8281,2.5427 c 3.40262,52.20835 11.91023,127.33085 11.91023,127.33085 h 17.01479 17.01479 c 0,0 8.50761,-74.7008 11.91065,-127.33085 l 3.8281,-2.96861 c 0.42506,0 456.84853,-337.8468 62.52953,-839.09462 z m -95.28307,831.87965 c 0,0 -20.41741,-17.4028 -25.94746,-26.31714 v -0.84758 l 24.67142,-545.81361 c 0,-1.69769 2.5525,-1.69769 2.5525,0 l 24.671,545.81361 v 0.84758 c -5.52963,8.91434 -25.94746,26.31714 -25.94746,26.31714 z"
+     fill="#00ed64"
+     id="path1"
+     style="stroke-width:4.25913" />
+</svg>
