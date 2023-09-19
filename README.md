@@ -57,12 +57,16 @@ provides more details on relocations.
 
 This Connector can be configured with the following properties:
 
-| Name               | Description                                                     | Example                                                                     | Required |
-|--------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------|----------|
-| MongoDB URL        | URL of MongoDB Server using a Replica Set or Clustered topology | `mongodb://localhost:27017,localhost:27018,localhost:27019/?replicaSet=rs0` | Yes      |
-| MongoDB Database   | Name of database to monitor                                     | `testdb`                                                                    | Yes      |
-| MongoDB Collection | Name of collection to monitor                                   | `testcollection`                                                            | No       |
-| MongoDB Event      | Name of event to monitor - Insert, Replace, Delete, Any         | `any`                                                                       | No       |
+| Name                                                     | Description                                                     | Example                                                                     | Required |
+|----------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------|----------|
+| MongoDB URL                                              | URL of MongoDB Server using a Replica Set or Clustered topology | `mongodb://localhost:27017,localhost:27018,localhost:27019/?replicaSet=rs0` | Yes      |
+| MongoDB Database                                         | Name of database to monitor                                     | `testdb`                                                                    | Yes      |
+| MongoDB Collection                                       | Name of collection to monitor                                   | `testcollection`                                                            | No       |
+| MongoDB Event                                            | Name of event to monitor - Insert, Replace, Delete, Any         | `any`                                                                       | No       |
+| Correlation key (process) - for intermediate catch event | Process variable to correlate incoming message                  | `processCorrelationKey`                                                     | Yes      |
+| Correlation key (payload) - for intermediate catch event | Correlation key in incoming message                             | `event.after.someKey`                                                       | Yes      |
+| Activation condition      - for intermediate catch event | Condition under which the Connector triggers                    | `event.after.someCondition = 'something'`                                   | No       |
+
 
 ### Output
 
