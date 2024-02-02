@@ -14,7 +14,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- connector SDK version -->
-    <version.connector-core>0.23.2</version.connector-core>
+    <version.connector-core>8.4.3</version.connector-core>
     <version.connector-runtime>8.4.3</version.connector-runtime>
 
     <!-- mongodb version -->
@@ -31,7 +31,7 @@
     <!-- maven plugins -->
     <plugin.version.maven-clean-plugin>3.3.1</plugin.version.maven-clean-plugin>
     <plugin.version.maven-compiler-plugin>3.12.1</plugin.version.maven-compiler-plugin>
-    <plugin.version.maven-dependency-plugin>3.6.0</plugin.version.maven-dependency-plugin>
+    <plugin.version.maven-dependency-plugin>3.6.1</plugin.version.maven-dependency-plugin>
     <plugin.version.maven-install-plugin>3.1.1</plugin.version.maven-install-plugin>
     <plugin.version.maven-jar-plugin>3.3.0</plugin.version.maven-jar-plugin>
     <plugin.version.maven-resources-plugin>3.3.1</plugin.version.maven-resources-plugin>
