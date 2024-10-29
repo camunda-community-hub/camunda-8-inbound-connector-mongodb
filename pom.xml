@@ -19,7 +19,7 @@
 
     <!-- mongodb version -->
     <mongodb-driver-sync.version>5.2.0</mongodb-driver-sync.version>
-    <mongodb-crypt.version>1.8.0</mongodb-crypt.version>
+    <mongodb-crypt.version>1.11.0</mongodb-crypt.version>
 
     <!-- external libraries -->
     <version.assertj>3.26.3</version.assertj>
